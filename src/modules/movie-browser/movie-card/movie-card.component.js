@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, CardTitle, CardMedia } from "material-ui";
+import { Card, CardMedia } from "material-ui";
 import { Link } from "react-router-dom";
 import "./movie-card.css";
 
@@ -15,7 +15,6 @@ class MovieCardComponent extends Component {
   render() {
     const { movie } = this.props;
     // The subtitle won't render if it's null
-    const subtitle = this.state.isMouseOver ? movie.overview : null;
 
     return (
       <Link to={`/movie/${movie.id}`} key={movie.id}>
@@ -37,7 +36,3 @@ class MovieCardComponent extends Component {
 }
 
 export default MovieCardComponent;
-// export default connect(
-//   () => ({}),
-//   { openMovieModal }
-// )(MovieCardComponent);

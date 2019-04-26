@@ -9,12 +9,13 @@ import store from "./store";
 import MovieDetailComponent from "./modules/movie-browser/movie-detail/movie-detail.component";
 import ScrollMemory from 'react-router-scroll-memory';
 
+// require('dotenv').config({path: __dirname + '/.env'})
+require('dotenv').config()
 
 const routing = (
     <BrowserRouter>
         <div>
             <ScrollMemory/>
-            {/*<App/>*/}
             <Switch>
             <Route exact path="/" component={App} />
             <Route path="/movie/:id" component={MovieDetailComponent}/>

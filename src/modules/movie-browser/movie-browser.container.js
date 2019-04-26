@@ -7,7 +7,6 @@ import * as movieActions from "./movie-browser.actions";
 import * as movieHelpers from "./movie-browser.helpers";
 import MovieList from "./movie-list/movie-list.component";
 import * as scrollHelpers from "../common/scroll.helpers";
-import MovieModal from './movie-modal/movie-modal.container';
 
 class MovieBrowser extends Component {
   constructor(props) {
@@ -15,10 +14,6 @@ class MovieBrowser extends Component {
     this.state = {
       currentPage: 1
     };
-    // Binds the handleScroll to this class (MovieBrowser)
-    // which provides access to MovieBrowser's props
-    // Note: You don't have to do this if you call a method
-    // directly from a lifecycle method or define an arrow function
     this.handleScroll = this.handleScroll.bind(this);
   }
 
@@ -51,9 +46,6 @@ class MovieBrowser extends Component {
       <div>
         <AppBar title="Movie Browser" />
         <Container>
-          {/*<Row>*/}
-            {/*<p>Search will go here</p>*/}
-          {/*</Row>*/}
           <Row>
             <MovieList movies={movies} isLoading={topMovies.isLoading} />
           </Row>

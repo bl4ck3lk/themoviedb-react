@@ -1,3 +1,15 @@
+# Installation
+
+Set a `.env` file in the root folder with the following structure:
+```editorconfig
+REACT_APP_MOVIE_DB_API_KEY=xxxxxx
+
+```
+
+This project was partially based on this project:
+https://github.com/ChuckkNorris/sweet-movie-app
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

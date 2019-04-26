@@ -1,10 +1,5 @@
-require("dotenv").config();
-// const MOVIE_DB_API_KEY = process.env.MOVIE_DB_API_KEY;
+const MOVIE_DB_API_KEY = process.env.REACT_APP_MOVIE_DB_API_KEY;
 
-const MOVIE_DB_API_KEY = "f6506bde0dc46c056b46e925f8307d0e";
-const MOVIE_DB_API_TOKEN = process.env.MOVIE_DB_API_TOKEN;
-
-console.log("***KEY***", MOVIE_DB_API_KEY);
 const MOVIE_DB_BASE_URL = "https://api.themoviedb.org/3";
 
 const createMovieDbUrl = (relativeUrl, queryParams) => {

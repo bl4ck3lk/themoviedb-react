@@ -1,7 +1,6 @@
 import { combineReducers } from "redux";
-import { createReducer, createAsyncReducer } from "../common/redux.helpers";
+import { createAsyncReducer } from "../common/redux.helpers";
 import { keys as movieActionKeys } from "./movie-browser.actions";
-import movieModalReducer from './movie-modal/movie-modal.reducer';
 
 
 // This will create a new state with both the existing
@@ -23,7 +22,6 @@ const moviesSuccessReducer = (state, action) => {
 
 // Combines our movie browser related reducers to build our movieBrowser reducer
 const movieBrowserReducer = combineReducers({
-  movieModal: movieModalReducer,
   topMovies: createAsyncReducer(movieActionKeys.GET_TOP_MOVIES, {
     [`${movieActionKeys.GET_TOP_MOVIES}_SUCCESS`]: moviesSuccessReducer
   }),
