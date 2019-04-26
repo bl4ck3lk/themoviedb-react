@@ -2,7 +2,7 @@
 
 Set a `.env` file in the root folder with the following structure:
 ```editorconfig
-REACT_APP_MOVIE_DB_API_KEY=xxxxxx
+REACT_APP_MOVIE_DB_API_KEY=xxxxxxx
 
 ```
 
