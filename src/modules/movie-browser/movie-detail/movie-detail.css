@@ -1,0 +1,119 @@
+.bg-image {
+  height: auto;
+  max-width: 100%;
+  display: inline-block;
+}
+
+.img-div {
+  max-width: 50%;
+    object-fit: contain;
+}
+
+.top-info {
+    padding-left: 15px;
+    color: #747474;
+    padding-top: 10px;
+}
+
+.date-text {
+    width: 54px;
+    height: 29px;
+    font-family: Helvetica;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #747474;
+}
+
+.runtime-text {
+    width: 86px;
+    height: 29px;
+    font-family: Helvetica;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: oblique;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #747474;
+}
+
+.votes-text {
+    width: 45px;
+    height: 19px;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+}
+
+.overview-text {
+    width: 100%;
+    /*height: 46px;*/
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    color: #747474;
+    text-align: justify;
+    padding-top: 20px;
+}
+
+.top-container {
+    /*margin: 15px 10px 10px;*/
+    margin: 15px auto 0 auto;
+    text-align: center;
+}
+
+.bottom {
+    margin: 10px;
+}
+
+.btn.btn-primary {
+    border-radius: 0;
+    width: 112px;
+    height: 48px;
+    border: solid 1px #6fcac2;
+    background-color: #86e4db;
+    text-align: center;
+    font-size: 14px;
+    word-wrap: break-word;
+    color: #282c34;
+    text-align: center;
+    padding: 0;
+}
+
+@media (max-width: 478px) {
+    .overview-text {
+        width: 327px;
+        height: 46px;
+        font-family: Helvetica;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.3px;
+        color: #747474;
+
+        text-align: justify;
+        padding-top: 20px;
+    }
+
+    .top-container {
+        margin: 15px auto 0 15px;
+    }
+}

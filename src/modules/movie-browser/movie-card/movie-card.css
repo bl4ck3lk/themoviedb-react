@@ -1,0 +1,31 @@
+.card-title {
+    whiteSpace: nowrap;
+    textOverflow: ellipsis;
+    overflow: hidden;
+    font-size: 14px;
+}
+.card-media {
+    overflow: hidden;
+}
+.card {
+    cursor: pointer;
+    overflow: hidden;
+}
+.bg-image {
+    width: 100%;
+}
+
+.card {
+    margin: 0px;
+}
+
+.card-title {
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+@media (max-width: 478px) {
+    .card-title {
+        font-size: 8px;
+    }
+}
