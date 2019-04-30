@@ -27,7 +27,7 @@ class MovieCardComponent extends Component {
             className="card-media"
             // overlay={<CardTitle className="cardTitle" title={movie.title} subtitle={subtitle} />}
           >
-            <img className="bg-image" src={movie.poster_path} />
+            <img className="bg-image" src={movie.poster_path} alt={movie.name}/>
           </CardMedia>
         </Card>
       </Link>

@@ -29,6 +29,5 @@ export const searchMovies = async ({ page, query }) => {
 
 export const getMovieDetails = async ({ movieId }) => {
   const fullUrl = createMovieDbUrl(`/movie/${movieId}`);
-  console.log('FULL', movieId, fullUrl);
   return fetch(fullUrl);
 };

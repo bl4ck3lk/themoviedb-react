@@ -2,33 +2,18 @@ import React, { Component } from "react";
 import { AppBar } from "material-ui";
 import Container from "react-bootstrap/Container";
 import { updateMoviePictureUrls } from "../movie-browser.helpers";
-import * as movieService from "../movie-browser.service";
 import { Row } from "react-bootstrap";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import "./movie-detail.css";
+import { connect } from "react-redux";
+import { getMovieDetails } from "../movie-browser.actions";
+import _ from "lodash";
 
 class MovieDetailComponent extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      movieDetails: null
-    };
-  }
-
   componentDidMount() {
     const { params } = this.props.match;
-    this.getDetails(params.id);
+    this.props.getMovieDetails(params.id);
   }
-
-  getDetails = movieId => {
-    console.log("MOVIE ID:", movieId);
-    return movieService
-      .getMovieDetails({ movieId })
-      .then(res => res.json())
-      .then(json =>
-        this.setState({ movieDetails: updateMoviePictureUrls(json) })
-      );
-  };
 
   formatReleaseDate = date => {
     // the format from the API is yyyy-mm-dd
@@ -41,13 +26,8 @@ class MovieDetailComponent extends Component {
   };
 
   render() {
-    const { movieDetails } = this.state;
+    const movie = updateMoviePictureUrls(this.props.movie);
 
-    const movie = { ...movieDetails };
-    const genres =
-      movie && movie.genres
-        ? movie.genres.map(genre => genre.name).join(", ")
-        : "";
     return (
       <div>
         <MuiThemeProvider>
@@ -80,4 +60,9 @@ class MovieDetailComponent extends Component {
   }
 }
 
-export default MovieDetailComponent;
+export default connect(
+  state => ({
+    movie: _.get(state, "movieBrowser.movieDetails.response", {})
+  }),
+  { getMovieDetails }
+)(MovieDetailComponent);

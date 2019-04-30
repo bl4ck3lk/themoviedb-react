@@ -6,13 +6,14 @@ import "./App.css";
 class App extends Component {
   render() {
     return (
-        <div>
-          <MuiThemeProvider>
+      <div>
+        <MuiThemeProvider>
+          <div>
             <MovieBrowser />
-          </MuiThemeProvider>
-        </div>
+          </div>
+        </MuiThemeProvider>
+      </div>
       // Provides the Material UI theme to child components
-
     );
   }
 }
