@@ -13,7 +13,7 @@ const updateMoviePictureUrls = (movieResult, width = 300) =>
     : {};
 
 const getMoviesList = moviesResponse => {
-  return !!moviesResponse
+  return moviesResponse && moviesResponse.results
     ? [
         ...moviesResponse.results.map(movieResult =>
           updateMoviePictureUrls(movieResult)
